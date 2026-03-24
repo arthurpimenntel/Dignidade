@@ -6,7 +6,7 @@ from supabase import create_client  #  ADICIONADO
 
 app = Flask(__name__) 
 ADMIN_USER = "admin"
-ADMIN_PASSWORD = "123456"
+ADMIN_PASSWORD = "proj.inter"
 app.secret_key = "dignidade_em_acao_r01"
 
 #  CONFIG SUPABASE 
