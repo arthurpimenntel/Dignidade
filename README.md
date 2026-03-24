@@ -13,7 +13,7 @@ Plataforma digital de apoio às ações sociais do Instituto Pelo Bem.
 ## Tecnologias
 - Python
 - Flask
-- SQLite
+- Supabase
 - HTML + CSS
 
 ## Como rodar localmente
