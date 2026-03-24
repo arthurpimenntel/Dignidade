@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="card destaque">
+    <h2>Envio realizado com sucesso</h2>
+
+    {% if tipo == "voluntario" %}
+        <p>Seu cadastro de voluntário foi recebido. Em breve entraremos em contato.</p>
+    {% elif tipo == "doacao" %}
+        <p>Sua intenção de doação foi registrada. Obrigado por apoiar o projeto.</p>
+    {% else %}
+        <p>Seu registro foi concluído com sucesso.</p>
+    {% endif %}
+
+    <div class="acoes">
+        <a class="btn" href="{{ url_for('index') }}">Voltar ao início</a>
+    </div>
+</section>
+{% endblock %}

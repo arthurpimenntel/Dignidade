@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="card destaque">
+        <h2>Tecnologia com propósito</h2>
+        <p>
+            O Dignidade em Ação conecta voluntários, doadores e ações sociais
+            voltadas a pessoas em situação de vulnerabilidade.
+        </p>
+
+        <div class="acoes">
+            <a class="btn" href="{{ url_for('voluntario') }}">Quero ser voluntário</a>
+            <a class="btn secundario" href="{{ url_for('doacao') }}">Quero doar</a>
+        </div>
+    </div>
+</section>
+
+<section class="grid-3">
+    <article class="card">
+        <h3>Kit de higiene</h3>
+        <p>Arrecadação e distribuição de itens básicos para banho e cuidado pessoal.</p>
+    </article>
+
+    <article class="card">
+        <h3>Corte de cabelo</h3>
+        <p>Ação prática com voluntários para fortalecer autoestima e dignidade.</p>
+    </article>
+
+    <article class="card">
+        <h3>Roda de conversa</h3>
+        <p>Momento de acolhimento, escuta e orientação para quem está em situação de vulnerabilidade.</p>
+    </article>
+</section>
+
+<section class="card">
+    <h3>Objetivo da plataforma</h3>
+    <p>
+        Centralizar informações do projeto, facilitar cadastro de voluntários,
+        organizar intenções de doação e preparar a base para evolução futura do sistema.
+    </p>
+</section>
+{% endblock %}
