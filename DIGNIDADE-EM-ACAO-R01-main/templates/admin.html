@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="grid-2">
+    <div class="card destaque">
+        <h2>{{ total_voluntarios }}</h2>
+        <p>Voluntários cadastrados</p>
+    </div>
+
+    <div class="card destaque">
+        <h2>{{ total_doacoes }}</h2>
+        <p>Doações registradas</p>
+    </div>
+</section>
+
+<section class="card">
+    <h3>Voluntários</h3>
+
+    {% if voluntarios %}
+        <div class="tabela-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Ajuda</th>
+                        <th>Disponibilidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in voluntarios %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.telefone }}</td>
+                        <td>{{ item.tipo_ajuda }}</td>
+                        <td>{{ item.disponibilidade }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>Nenhum voluntário cadastrado até o momento.</p>
+    {% endif %}
+</section>
+
+<section class="card">
+    <h3>Doações</h3>
+
+    {% if doacoes %}
+        <div class="tabela-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Contato</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in doacoes %}
+                    <tr>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.contato }}</td>
+                        <td>{{ item.tipo_doacao }}</td>
+                        <td>{{ item.descricao }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>Nenhuma doação registrada até o momento.</p>
+    {% endif %}
+</section>
+{% endblock %}
